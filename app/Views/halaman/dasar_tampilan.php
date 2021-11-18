@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,12 +11,12 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title><?=($title ?? '')?></title>
     
     <!-- page css -->
-    <link href=<?=base_url("dist/css/pages/login-register-lock.css")?> rel="stylesheet">
+    <link href="<?=base_url('/dist/css/pages/login-register-lock.css')?>" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href=<?=base_url("dist/css/style.min.css")?> rel="stylesheet">
+    <link href="<?=base_url('/dist/css/style.min.css')?>" rel="stylesheet">
     
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,20 +27,20 @@
 <![endif]-->
 </head>
 
-<body> 
+<body>
 
-<?$this->renderSection('isiWeb')?>
+    <?=$this->renderSection('isiweb')?>
 
-<!-- ============================================================== -->
+    <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src=<?=base_url("/assets/node_modules/jquery/jquery-3.2.1.min.js")?> ></script>
+    <script src="<?=base_url('/assets/node_modules/jquery/jquery-3.2.1.min.js')?>"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src=<?=base_url("/assets/node_modules/popper/popper.min.js")?> ></script>
-    <script src=<?=base_url("/assets/node_modules/bootstrap/dist/js/bootstrap.min.js")?> ></script>
+    <script src="<?=base_url('/assets/node_modules/popper/popper.min.js')?>"></script>
+    <script src="<?=base_url('/assets/node_modules/bootstrap/dist/js/bootstrap.min.js')?>"></script>
     <!--Custom JavaScript -->
     <script type="text/javascript">
         $(function() {
@@ -56,5 +57,4 @@
             $("#recoverform").fadeIn();
         });
     </script>
-   
-<body>
+    </body>
