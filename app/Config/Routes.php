@@ -36,6 +36,11 @@ $routes->get('/hello', 'SelamatDatang::hal_awal');
 $routes->get('/login', 'SelamatDatang::beranda_login');
 $routes->get('login', 'Login::cekLogin');
 $routes->get('/daftar_member','SelamatDatang::daftar_member');
+$routes->get('/beranda','SelamatDatang::hal_beranda', ['filter'=>'auth']);
+$routes->get('/logout', function(){
+    services::session()->destroy();
+    return redirect()->to('/login');
+});
 
 /*
  * --------------------------------------------------------------------
